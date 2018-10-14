@@ -1,0 +1,12 @@
+g++ -c card.cpp
+g++ -c cardHeap.cpp
+g++ -c hand.cpp
+g++ -c player.cpp
+g++ -c dealer.cpp
+g++ -c pic.cpp
+g++ -c modalPic.cpp
+g++ -c cardPic.cpp
+g++ -c page.cpp
+g++ -c option.cpp
+g++ -c UI.cpp
+g++ -c main.cpp
