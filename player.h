@@ -12,10 +12,17 @@ class Player{
 		string name;
 		Hand hand;
 		int medal;
+		int bet;
 	public:
+		void debug();
 		Player(string nm,int md);
+		void clearHand();
+		Hand getHand();
 		void addCard(Card x);
-		void addmedal(int x);
+		void addMedal(int x);
+		void addBet(int x);
+		int getMedal();
+		int getBet();
 		string getName();
 		void setName(string s);
 };

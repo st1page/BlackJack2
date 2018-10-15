@@ -32,7 +32,7 @@ string pattern[5][6] ={
 		"|xxxxxx|",
 		"`------'"  },  };
 
-string figure[13] = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
+
 const int x1 = 1, y1 = 1;
 const int x2 = 4, y2 = 6;
 CardPic::CardPic(void):Pic(8, 6){
@@ -40,11 +40,11 @@ CardPic::CardPic(void):Pic(8, 6){
 }
 CardPic::CardPic(Card x):Pic(8, 6){
 	int ptn = x.getPattern();
-	int fig = x.getFigure();
+	string fig = x.getFigureS();
 	for(int i=0;i<6;i++) setLine(i, pattern[ptn][i]);	
-	insStr(x1, y1, figure[fig]);
-	if( figure[fig].size() == 2) insStr(x2, y2-1, figure[fig]);
-	else insStr(x2, y2, figure[fig]);
+	insStr(x1, y1, fig);
+	if( fig.size() == 2) insStr(x2, y2-1, fig);
+	else insStr(x2, y2, fig);
 }
 int CardPic::getKey(void){
 	return key;
@@ -56,4 +56,4 @@ int main(){
 		cout<<endl;
 	}
 
-}*/
+}*/ 

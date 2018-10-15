@@ -1,9 +1,9 @@
 #include "cardHeap.h"
 
 #include<algorithm>
-
 short a[420];
 void CardHeap::genCards(){
+	srand(time(0));
 	cards.clear();
 	for(int i=0;i<siz;i++) a[i] = i%52;
 	random_shuffle(a,a+siz);

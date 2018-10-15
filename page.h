@@ -19,6 +19,7 @@ class Page{
 		void setLine(int i,string s);
 		void print(void);
 		void insPic(int x,int y,Pic p);
+		void insPicBottom(int x,int y,Pic p);
 		void centerInsPic(int i,Pic p);
 		void centerInsPic(Pic p);
 		void insStr(int x,int y,string s);

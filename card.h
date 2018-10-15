@@ -13,6 +13,7 @@ class Card{
 		int getKey(void);
 		int getPattern(void);
 		int getFigure(void);
+		string getFigureS(void);
 		int getValue(void);		
 };
 #endif

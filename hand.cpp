@@ -4,6 +4,9 @@ Hand::Hand(void) {
 	cards.clear();
 	A_tot = sum = 0;
 }
+int Hand::getTot(void){
+	return cards.size();
+}
 void Hand::addCard(Card x) {
 	cards.push_back(x);
 	if( x.getFigure() == 1) A_tot++;

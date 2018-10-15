@@ -5,7 +5,6 @@
 #define Width (80)
 
 void filter(string &s){
-//	cout<<s.length()<<endl;
 	while(s.length() < Width) s.push_back(' ');
 	while(s.length() > Width) s.pop_back();
 }
@@ -43,6 +42,14 @@ void Page::insPic(int x,int y,Pic p){
 	for(int i=0;i<h;i++) 
 		for(int j=0;j<w;j++) 
 			a[x+i][y+j] = b[i][j];
+	return ;
+}
+void Page::insPicBottom(int x,int y,Pic p){
+	int h = p.getHeight(), w = p.getWidth();
+	vector<string> b = p.getA();
+	for(int i=0;i<h;i++) 
+		for(int j=0;j<w;j++) 
+			if(a[x+i][y+j]==' ')a[x+i][y+j] = b[i][j];
 	return ;
 }
 void Page::centerInsPic(int i,Pic p){

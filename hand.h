@@ -12,6 +12,7 @@ class Hand{
 		int A_tot,sum;
 	public:
 		Hand(void);
+		int getTot(void);
 		void addCard(Card x);
 		vector < Card > getCards(void);
 		int getPoints(void);

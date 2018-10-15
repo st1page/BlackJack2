@@ -10,7 +10,7 @@ bool Dealer::nomal_judge(){
 	int points = hand.getPoints();
 	return (points <= 17);
 }
-bool Dealer::judge(int round){
+bool Dealer::judge(){
 	return nomal_judge();
 }
 void Dealer::mem_init(int x){	

@@ -4,6 +4,7 @@
 
 #include "pic.h"
 #include "page.h"
+#include "card.h"
 #include "option.h"
 #include "dealer.h"
 #include "player.h"
@@ -19,9 +20,20 @@ class UI{
 		int mainMenu();
 		Option option();
 		void help(); //unfinushed
-		void modal(string s, string header, string footer);
-		void modal(Pic p, string header, string footer);
-		void play();
+		void modal(string s, string header="", string footer="");
+		void modal(Pic p, string header="", string footer="");
+		int getBet(int medal);
+		void updateMedal(int medal,int bet);
+		void updateDealer(int tot);
+		void gameInit(int medal,int bet);
+		void firstCard(Card x);
+		void getCard(Card x,int i);
+		int getOp();
+		void win();
+		void lose();
+		void bust();
+		void push();
+		void result(Dealer dealer, Player player, int win);
 };
 
 #endif

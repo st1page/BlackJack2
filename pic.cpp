@@ -5,7 +5,6 @@
 #include <algorithm>
 
 Pic::Pic(int w,int h){
-	cout<<w<<" "<<h<<endl;
 	width = w;
 	height = h;
 	for(int i=0;i<h;i++) a.push_back(string(width,' '));
@@ -13,7 +12,7 @@ Pic::Pic(int w,int h){
 Pic::Pic(string filepath){
 	ifstream fin;
 	fin.open(filepath);
-	if(!fin.is_open()){
+	if(!fin.is_open()){	
 		cout<<"can't find "+filepath<<endl;
 		return ;
 	}

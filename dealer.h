@@ -14,7 +14,7 @@ class Dealer: public Player{
 		bool nomal_judge();
 	public:
 		Dealer(int d);
-		bool judge(int round);
+		bool judge();
 		void mem_init(int x);
 		void mem_change(Card card);
 };
