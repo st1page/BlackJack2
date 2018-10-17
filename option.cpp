@@ -55,11 +55,13 @@ void Option::load(){
 			return ;
 	}
 	unsigned hash = 0;
-	fin >> hash >>name;
+	fin >> hash;
+	fin >>name;
 	if(hash) {
-		difficulty = hash|3;
-		decksum = (hash>>2)|7;
+		difficulty = hash&3;
+		decksum = (hash>>2)&7;
 		medal = (hash>>5);
 	}
+	cout<<difficulty<<" "<<decksum<<" "<<medal<<endl;
 	fin.close();
 }

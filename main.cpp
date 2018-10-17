@@ -137,10 +137,14 @@ int play(Dealer &dealer, Player &player, CardHeap &heap){
 	return x;
 }
 void game(){
-	Option opt;
+	Option opt; opt.load();
 	Dealer dealer = Dealer(opt.getDiffculty());
+	cout<<"aaa"<<endl;
 	Player player = Player(opt.getName(), opt.getMedal());
+	cout<<"bbb"<<endl;
+	cout<<opt.getDeckSum()<<endl;
 	CardHeap heap = CardHeap(opt.getDeckSum());
+	cout<<"ccc"<<endl;
 	int x = play(dealer,player,heap);
 	while(x) x = play(dealer,player,heap);
 	mainMenu();

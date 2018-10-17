@@ -1,7 +1,7 @@
 #include "cardHeap.h"
 
 #include<algorithm>
-short a[420];
+short a[1000];
 void CardHeap::genCards(){
 	srand(time(0));
 	cards.clear();
